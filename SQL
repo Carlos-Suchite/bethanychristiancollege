@@ -1,0 +1,19 @@
+-- SQL script to create the database and users table --
+CREATE DATABASE bible_course_db;
+
+USE bible_course_db;
+
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+-- Instructions:
+-- 1. Run this script in your MySQL client to set up the database.
+-- 2. Make sure your PHP `mysqli` connection settings match your local environment.
+-- 3. After setup, you can use the provided `register.php` file for user registration.
+
+-- Next steps can include creating `about.html`, `courses.html`, and `contact.html` pages.
