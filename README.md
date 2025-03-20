@@ -1,1 +1,1 @@
-# Bethany-Christian-College-
+(https://www.bethanychristiancolle.com)
