@@ -1,59 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bethany Chrsitian College</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bethany Christian College</title>
+  <link rel="stylesheet" href="styles.css"/>
 </head>
 <body>
-    <header>
-        <h1>Welcome to Bethany Christian College</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="courses.html">Courses</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-                <li><a href="register.html">Register</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h2>Start Your Journey</h2>
-            <p>Join our Bible course to deepen your understanding of the Scriptures.</p>
-            <a href="register.html" class="button">Register Now</a>
-        </section>
+  <header>
+    <div style="text-align: center; padding: 20px 0;">
+      <img src="images.png" alt="Bethany Christian College" style="height: 40vh;">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" id="home">Home</a></li>
+        <li><a href="about.html" id="aboutUs">About Us</a></li>
+        <li><a href="courses.html" id="courses">Courses</a></li>
+        <li><a href="contact.html" id="contactUs">Contact Us</a></li>
+        <li><a href="register.html" id="register">Register</a></li>
+      </ul>
+    </nav>
 
-        <section>
-            <h2>Available Courses</h2>
-            <ul>
-                <li>Introduction to the Bible</li>
-                <li>Old Testament Studies</li>
-                <li>New Testament Studies</li>
-                <li>Life of Jesus</li>
-            </ul>
-        </section>
+    <!-- Language Switcher -->
+    <div id="languageSwitcher" style="text-align: center; margin-top: 20px;">
+      <button onclick="setLanguage('en')">English</button>
+      <button onclick="setLanguage('es')">Español</button>
+      <button onclick="setLanguage('fr')">Français</button>
+      <!-- Add more languages here -->
+    </div>
+  </header>
 
-        <section>
-            <h2>User Registration</h2>
-            <form action="register.php" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+  <main>
+    <section>
+      <h2 id="startYourJourney">Start Your Journey</h2>
+      <p id="joinBibleCourse">Join our Bible course to deepen your understanding of the Scriptures.</p>
+      <a href="register.html" class="button" id="registerNow">Register Now</a>
+    </section>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+    <section>
+      <h2 id="availableCourses">Available Courses</h2>
+      <ul>
+        <li id="course1">Introduction to the Bible</li>
+        <li id="course2">Old Testament Studies</li>
+        <li id="course3">New Testament Studies</li>
+        <li id="course4">Life of Jesus</li>
+      </ul>
+    </section>
 
-                <button type="submit">Register</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Bethany Christian College. All rights reserved.</p>
-    </footer>
+    <!-- Account Access Section -->
+    <section>
+      <h2 id="accountAccess">Account Access</h2>
+      <form id="loginForm">
+        <label for="loginEmail" id="email">Email:</label>
+        <input type="email" id="loginEmail" name="email" required />
+
+        <label for="loginPassword" id="password">Password:</label>
+        <input type="password" id="loginPassword" name="password" required />
+
+        <button type="submit" id="login">Login</button>
+        <p><a href="forgot-password.html" id="forgotPassword">Forgot Password?</a></p>
+        <p id="createAccount">Don't have an account? <a href="register.html">Create Account</a></p>
+      </form>
+      <p id="loginMessage"></p>
+    </section>
+
+    <!-- Registration Section -->
+    <section>
+      <h2 id="userRegistration">User Registration</h2>
+      <form id="registerForm">
+        <label for="name" id="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email" id="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password" id="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit" id="register">Register</button>
+      </form>
+      <p id="message"></p>
+    </section>
+
+    <!-- Zoom Meeting Schedule -->
+    <section>
+      <h2 id="zoomSchedule">Zoom Meeting Schedule</h2>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Topic</th>
+            <th>Join Link</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>April 10, 2025</td>
+            <td>Introduction to the Bible</td>
+            <td><a href="https://zoom.us/j/1234567890" target="_blank">Join Meeting</a></td>
+            <td>10:00 AM</td>
+          </tr>
+          <tr>
+            <td>April 12, 2025</td>
+            <td>Old Testament Studies</td>
+            <td><a href="https://zoom.us/j/9876543210" target="_blank">Join Meeting</a></td>
+            <td>2:00 PM</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Grades Section -->
+    <section>
+      <h2 id="yourGrades">Your Grades</h2>
+      <table border="1" cellpadding="8" cellspacing="0">
+        <thead>
+          <tr>
+            <th>Course</th>
+            <th>Grade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Introduction to the Bible</td>
+            <td>A</td>
+          </tr>
+          <tr>
+            <td>Old Testament Studies</td>
+            <td>B+</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Study Notes Section -->
+    <section>
+      <h2 id="studyNotes">Study Notes</h2>
+      <ul>
+        <li><a href="notes/pentateuch.pdf" download>📄 Pentateuch</a></li>
+        <li><a href="notes/history_books.pdf" download>📄 History Books</a></li>
+        <li><a href="notes/poetic_books.pdf" download>📄 Poetic Books</a></li>
+        <li><a href="notes/major_prophets.pdf" download>📄 Major Prophets</a></li>
+        <li><a href="notes/minor_prophets.pdf" download>📄 Minor Prophets</a></li>
+        <li><a href="notes/gospels.pdf" download>📄 Gospels</a></li>
+        <li><a href="notes/pauline_epistles.pdf" download>📄 Letters of Paul (Pauline Epistles)</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Bethany Christian College. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Translation data
+    const translations = {
+      "en": {
+        "home": "Home",
+        "aboutUs": "About Us",
+        "courses": "Courses",
+        "contactUs": "Contact Us",
+        "register": "Register",
+        "startYourJourney": "Start Your Journey",
+        "joinBibleCourse": "Join our Bible course to deepen your understanding of the Scriptures.",
+        "registerNow": "Register Now",
+        "availableCourses": "Available Courses",
+        "course1": "Introduction to the Bible",
+        "course2": "Old Testament Studies",
+        "course3": "New Testament Studies",
+        "course4": "Life of Jesus",
+        "accountAccess": "Account Access",
+        "login": "Login",
+        "forgotPassword": "Forgot Password?",
+        "createAccount": "Don't have an account? Create Account",
+        "userRegistration": "User Registration",
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "register": "Register",
+        "zoomSchedule": "Zoom Meeting Schedule",
+        "yourGrades": "Your Grades",
+        "studyNotes": "Study Notes"
+      },
+      "es": {
+        "home": "Inicio",
+        "aboutUs": "Sobre Nosotros",
+        "courses": "Cursos",
+        "contactUs": "Contacto",
+        "register": "Registrarse",
+        "startYourJourney": "Comienza tu Viaje",
+        "joinBibleCourse": "Únete a nuestro curso bíblico para profundizar tu comprensión de las Escrituras.",
+        "registerNow": "Regístrate Ahora",
+        "availableCourses": "Cursos Disponibles",
+        "course1": "Introducción a la Biblia",
+        "course2": "Estudios del Antiguo Testamento",
+        "course3": "Estudios del Nuevo Testamento",
+        "course4": "La Vida de Jesús",
+        "accountAccess": "Acceso a la Cuenta",
+        "login": "Iniciar sesión",
+        "forgotPassword": "¿Olvidaste tu Contraseña?",
+        "createAccount": "¿No tienes una cuenta? Crear Cuenta",
+        "userRegistration": "Registro de Usuario",
+        "name": "Nombre",
+        "email": "Correo Electrónico",
+        "password": "Contraseña",
+        "register": "Registrarse",
+        "zoomSchedule": "Calendario de Reuniones en Zoom",
+        "yourGrades": "Tus Calificaciones",
+        "studyNotes": "Notas de Estudio"
+      },
+      "fr": {
+        "home": "Accueil",
+        "aboutUs": "À propos de nous",
+        "courses": "Cours",
+        "contactUs": "Contactez-nous",
+        "register": "S'inscrire",
+        "startYourJourney": "Commencez votre voyage",
+        "joinBibleCourse": "Rejoignez notre cours biblique pour approfondir votre compréhension des Écritures.",
+        "registerNow": "Inscrivez-vous maintenant",
+        "availableCourses": "Cours Disponibles",
+        "course1": "Introduction à la Bible",
+        "course2": "Études de l'Ancien Testament",
+        "course3": "Études du Nouveau Testament",
+        "course4": "La Vie de Jésus",
+        "accountAccess": "Accès au compte",
+        "login": "Se connecter",
+        "forgotPassword": "Mot de passe oublié?",
+        "createAccount": "Pas de compte? Créez un compte",
+        "userRegistration": "Inscription de l'utilisateur",
+        "name": "Nom",
+        "email": "E-mail",
+        "password": "Mot de passe",
+        "register": "S'inscrire",
+        "zoomSchedule": "Calendrier des réunions Zoom",
+        "yourGrades": "Vos notes",
+        "studyNotes": "Notes d'étude"
+      }
+    };
+
+    // Function to set language
+    function setLanguage(lang) {
+      const translation = translations[lang];
+      if (translation) {
+        document.getElementById('home').innerText = translation.home;
+        document.getElementById('aboutUs').innerText = translation.aboutUs;
+        document.getElementById('courses').innerText = translation.courses;
+        document.getElementById('contactUs').innerText = translation.contactUs;
+        document.getElementById('register').innerText = translation.register;
+        document.getElementById('startYourJourney').innerText = translation.startYourJourney;
+        document.getElementById('joinBibleCourse').innerText = translation.joinBibleCourse;
+        document.getElementById('registerNow').innerText = translation.registerNow;
+        document.getElementById('availableCourses').innerText = translation.availableCourses;
+        document.getElementById('course1').innerText = translation.course1;
+        document.getElementById('course2').innerText = translation.course2;
+        document.getElementById('course3').innerText = translation.course3;
+        document.getElementById('course4').innerText = translation.course4;
+        document.getElementById('accountAccess').innerText = translation.accountAccess;
+        document.getElementById('login').innerText = translation.login;
+        document.getElementById('forgotPassword').innerText = translation.forgotPassword;
+        document.getElementById('createAccount').innerText = translation.createAccount;
+        document.getElementById('userRegistration').innerText = translation.userRegistration;
+        document.getElementById('name').innerText = translation.name;
+        document.getElementById('email').innerText = translation.email;
+        document.getElementById('password').innerText = translation.password;
+        document.getElementById('register').innerText = translation.register;
+        document.getElementById('zoomSchedule').innerText = translation.zoomSchedule;
+        document.getElementById('yourGrades').innerText = translation.yourGrades;
+        document.getElementById('studyNotes').innerText = translation.studyNotes;
+      }
+    }
+
+    // Set default language
+    setLanguage('en');
+  </script>
 </body>
 </html>
